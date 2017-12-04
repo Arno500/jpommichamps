@@ -1,0 +1,148 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+.wrapper {
+    height: 100%;
+    width: 100%;
+}
+
+.navbackground {
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.90);
+    width: 100%;
+    z-index: 1000
+}
+
+.navbar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    list-style: none;
+    margin: 0 auto;
+    max-width: 1100px;
+    padding: 0;
+    text-align: center;
+    width: 90vw;
+    z-index: 1000;
+}
+
+.navbar>li {
+    font-size: 2em;
+    font-weight: 300;
+    padding: 5px 0;
+    text-align: center;
+    width: 25%;
+}
+
+.navitems {
+    color: black;
+    display: block;
+    position: relative;
+    text-decoration: none;
+    width: 100%;
+}
+
+.navitems::after {
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    content: "";
+    -webkit-transition: width 0.5s, background 0.3s;
+    transition: width 0.5s, background 0.3s;
+    height: 4px;
+    width: 0;
+}
+
+.navitems:hover::after {
+    background: red;
+    width: 100%;
+}
+
+.navitems.active::after {
+    width: 100%;
+    background: #1976d2;
+}
+
+.front {
+    color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    text-align: center;
+    width: 100%;
+    z-index: -1;
+}
+
+.front>p {
+    margin: 10px;
+    line-height: 1.7;
+}
+
+.front>parallax {
+    -webkit-filter: brightness(0.5);
+    filter: brightness(0.5);
+}
+
+div.parallax>img {
+    -webkit-filter: brightness(0.3);
+    filter: brightness(0.3);
+}
+
+.col.m7 {
+    display: block;
+    margin: auto auto 1.5em auto;
+    width: auto !important;
+}
+
+.card {}
+
+a.card-image>img {
+    filter: blur(1px) brightness(0.5);
+    height: 200px;
+    width: auto;
+}
+
+div.apps>h1 {
+    margin: 2rem 0.5rem;
+}
+
+.row {
+    column-count: 2;
+    column-gap: 0;
+    flex-shrink: 0;
+    /*     display: -ms-flexbox;
+    -ms-flex-direction: column;
+    -ms-flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100vw;
+    overflow-x: auto; */
+}
+
+@media (max-width: 350px) {
+    .col.m7 {
+        width: 100%;
+    }
+}
