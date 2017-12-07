@@ -109,13 +109,12 @@ div.parallax>img {
     filter: brightness(0.3);
 }
 
-.col.m7 {
-    display: block;
-    margin: auto auto 1.5em auto;
-    width: auto !important;
+.col {
+    margin-top: 1px;
 }
 
 a.card-image>img {
+    -webkit-filter: blur(1px) brightness(0.5);
     filter: blur(1px) brightness(0.5);
     height: 200px;
     width: auto;
@@ -125,22 +124,24 @@ div.apps>h1 {
     margin: 2rem 0.5rem;
 }
 
+.cards-container .card {
+    display: inline-block;
+    overflow: visible;
+}
+
+.row>* {
+    column-break-inside: avoid;
+    -webkit-column-break-inside: avoid;
+    break-inside: avoid;
+    -webkit-break-inside: avoid;
+}
+
+.text-center {
+    text-align: center;
+}
+
 .row {
     column-count: 2;
     column-gap: 0;
     flex-shrink: 0;
-    /*     display: -ms-flexbox;
-    -ms-flex-direction: column;
-    -ms-flex-wrap: wrap;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    height: 100vw;
-    overflow-x: auto; */
-}
-
-@media (max-width: 350px) {
-    .col.m7 {
-        width: 100%;
-    }
 }
