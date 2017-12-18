@@ -4,6 +4,34 @@ body {
     overflow-x: hidden;
 }
 
+nav,
+nav>* {
+    height: initial;
+    line-height: initial;
+    font-size: initial;
+    box-shadow: initial;
+    padding: initial;
+    -webkit-tap-highlight-color: initial;
+    transition: none;
+    float: initial;
+}
+
+nav ul li {
+    height: initial;
+    line-height: initial;
+    font-size: initial;
+    box-shadow: initial;
+    transition: none;
+}
+
+nav ul a {
+    font-size: inherit;
+}
+
+nav ul a:hover {
+    background-color: initial;
+}
+
 h2 {
     font-size: 1.5em;
 }
@@ -17,7 +45,7 @@ h2 {
     position: fixed;
     background-color: rgba(255, 255, 255, 0.90);
     width: 100%;
-    z-index: 1000
+    z-index: 1000;
 }
 
 .navbar {
@@ -70,7 +98,7 @@ h2 {
     background: #1976d2;
 }
 
-.front {
+.full {
     color: white;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -91,7 +119,7 @@ h2 {
     margin: 0;
     text-align: center;
     width: 100%;
-    z-index: -1;
+    z-index: 0;
 }
 
 .front>p {
@@ -119,7 +147,7 @@ a.card-image>img {
     width: auto;
 }
 
-div.apps>h1 {
+div.section>h1 {
     margin: 2rem 0.5rem;
 }
 
@@ -147,4 +175,16 @@ div.apps>h1 {
 
 .card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating) {
     color: #193fd2;
+}
+
+.me {
+    border: solid 2px white;
+    padding: 10px 14px;
+    transition: all 0.5s;
+}
+
+.me:hover {
+    background-color: white;
+    padding: 15px 19px;
+    color: black;
 }
