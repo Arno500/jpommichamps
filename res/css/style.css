@@ -116,7 +116,6 @@ div.parallax>img {
 a.card-image>img {
     -webkit-filter: blur(1px) brightness(0.5);
     filter: blur(1px) brightness(0.5);
-    height: 200px;
     width: auto;
 }
 
@@ -144,4 +143,8 @@ div.apps>h1 {
     column-count: 2;
     column-gap: 0;
     flex-shrink: 0;
+}
+
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating) {
+    color: #193fd2;
 }
