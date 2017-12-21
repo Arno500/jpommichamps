@@ -37,7 +37,7 @@ $(document).scroll(function () {
         var navitem = $('a[href="#' + post.attr("id") + '"]');
         var position = post.position().top - $(window).scrollTop();
 
-        if (position <= 50 && position + post.height() >= 20) {
+        if (position <= 50 && position + post.height() >= 25) {
             navitem.addClass('active');
         } else {
             navitem.removeClass('active');
