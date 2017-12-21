@@ -36,6 +36,10 @@ h2 {
     font-size: 1.5em;
 }
 
+h3 {
+    font-size: 1.3em;
+}
+
 .wrapper {
     height: 100%;
     width: 100%;
@@ -154,6 +158,10 @@ div.section>h1 {
 .cards-container .card {
     display: inline-block;
     overflow: visible;
+}
+
+.card .card-image .card-title {
+    min-width: 200px;
 }
 
 .row>* {
