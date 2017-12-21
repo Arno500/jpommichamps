@@ -185,6 +185,10 @@ div.section>h1 {
     color: #193fd2;
 }
 
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating):hover {
+    color: #3da3ff;
+}
+
 .me {
     border: solid 2px white;
     padding: 10px 14px;
