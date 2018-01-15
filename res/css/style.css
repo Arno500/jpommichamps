@@ -146,9 +146,16 @@ div.parallax>img {
 }
 
 a.card-image>img {
-    -webkit-filter: blur(1px) brightness(0.5);
-    filter: blur(1px) brightness(0.5);
+    -webkit-filter: brightness(0.5);
+    filter: brightness(0.5);
+    transition: all 0.5s;
     width: auto;
+}
+
+.card:hover img {
+    -webkit-filter: initial;
+    filter: initial;
+    color: blue;
 }
 
 div.section>h1 {
