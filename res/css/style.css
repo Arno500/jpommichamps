@@ -9,9 +9,11 @@ nav>* {
     height: initial;
     line-height: initial;
     font-size: initial;
+    -webkit-box-shadow: initial;
     box-shadow: initial;
     padding: initial;
     -webkit-tap-highlight-color: initial;
+    -webkit-transition: none;
     transition: none;
     float: initial;
 }
@@ -20,7 +22,9 @@ nav ul li {
     height: initial;
     line-height: initial;
     font-size: initial;
+    -webkit-box-shadow: initial;
     box-shadow: initial;
+    -webkit-transition: none;
     transition: none;
 }
 
@@ -123,7 +127,6 @@ h3 {
     margin: 0;
     text-align: center;
     width: 100%;
-    z-index: 0;
 }
 
 .front>p {
@@ -148,6 +151,7 @@ div.parallax>img {
 a.card-image>img {
     -webkit-filter: brightness(0.5);
     filter: brightness(0.5);
+    -webkit-transition: all 0.5s;
     transition: all 0.5s;
     width: auto;
 }
@@ -183,8 +187,11 @@ div.section>h1 {
 }
 
 .row {
+    -webkit-column-count: 2;
     column-count: 2;
+    -webkit-column-gap: 0;
     column-gap: 0;
+    -ms-flex-negative: 0;
     flex-shrink: 0;
 }
 
@@ -199,6 +206,7 @@ div.section>h1 {
 .me {
     border: solid 2px white;
     padding: 10px 14px;
+    -webkit-transition: all 0.5s;
     transition: all 0.5s;
 }
 
@@ -206,4 +214,32 @@ div.section>h1 {
     background-color: white;
     padding: 15px 19px;
     color: black;
+}
+
+@-webkit-keyframes calltoscroll {
+    from {
+        -webkit-box-shadow: inset 0px -50px 70px -70px rgb(255, 255, 255, 0);
+    }
+    to {
+        -webkit-box-shadow: inset 0px -50px 70px -70px rgb(145, 145, 145);
+    }
+}
+
+@keyframes calltoscroll {
+    from {
+        box-shadow: inset 0px -50px 70px -70px rgb(255, 255, 255, 0);
+    }
+    to {
+        box-shadow: inset 0px -90px 70px -70px rgba(145, 145, 145, 1);
+    }
+}
+
+.calltoscroll {
+    -webkit-animation: calltoscroll;
+    animation: calltoscroll;
+    -webkit-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    -webkit-animation-direction: alternate;
 }
